@@ -2,40 +2,232 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-    <groupId>com.example</groupId>
+
+    <groupId>com.anlythree</groupId>
     <artifactId>anly-sca-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>anly-sca-core</name>
-    <description>anly-sca-core</description>
-    <properties>
-        <java.version>17</java.version>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+    <packaging>pom</packaging>
+    <name>mate-core</name>
+    <description>a microservice core components based on Spring Cloud Alibaba</description>
+    <url>https://github.com/anlythree/anly-sca-core</url>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <licenses>
+        <license>
+            <name>The MIT License</name>
+            <url>http://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>anlythree</name>
+            <email>anlythree@gmail.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <anly-sca-core.version>0.0.1-SNAPSHOT</anly-sca-core.version>
+    </properties>
+
+    <modules>
+        <module>anly-sca-starter-dependencies</module>
+<!--        <module>anly-sca-starter-common</module>-->
+<!--        <module>anly-sca-starter-database</module>-->
+<!--        <module>anly-sca-starter-dubbo</module>-->
+<!--        <module>anly-sca-starter-log</module>-->
+<!--        <module>anly-sca-starter-redis</module>-->
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.anlythree</groupId>
+                <artifactId>anly-sca-starter-dependencies</artifactId>
+                <version>${anly-sca-core.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+            <!-- Source -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+<!--            &lt;!&ndash; GPG &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-gpg-plugin</artifactId>-->
+<!--                <version>1.6</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>sign-artifacts</id>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>sign</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <show>private</show>
+                    <nohelp>true</nohelp>
+                    <charset>UTF-8</charset>
+                    <encoding>UTF-8</encoding>
+                    <docencoding>UTF-8</docencoding>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--自动发布-->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <!--当前环境-->
+                <spring.active>local</spring.active>
+                <config.server-addr>127.0.0.1:8848</config.server-addr>
+                <config.namespace></config.namespace>
+                <config.group>DEFAULT_GROUP</config.group>
+                <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>
+                <sentinel.port>8719</sentinel.port>
+                <sentinel.dashboard>127.0.0.1:8088</sentinel.dashboard>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spring.active>dev</spring.active>
+                <config.server-addr>127.0.0.1:8848</config.server-addr>
+                <config.namespace></config.namespace>
+                <config.group>DEFAULT_GROUP</config.group>
+                <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>
+                <sentinel.port>8719</sentinel.port>
+                <sentinel.dashboard>127.0.0.1:8080</sentinel.dashboard>
+            </properties>
+            <!--            <activation>-->
+            <!--                <activeByDefault>true</activeByDefault>-->
+            <!--            </activation>-->
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <spring.active>test</spring.active>
+                <config.server-addr>172.26.85.32:8848</config.server-addr>
+                <config.namespace>568b8eaa-f25d-4f2a-8c87-83dcb4caa955</config.namespace>
+                <config.group>DEFAULT_GROUP</config.group>
+                <discovery.server-addr>172.26.85.32:8848</discovery.server-addr>
+                <sentinel.port>8719</sentinel.port>
+                <sentinel.dashboard>localhost:8080</sentinel.dashboard>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.active>prod</spring.active>
+                <config.server-addr>172.26.85.32:8848</config.server-addr>
+                <config.namespace>568b8eaa-f25d-4f2a-8c87-83dcb4caa955</config.namespace>
+                <config.group>DEFAULT_GROUP</config.group>
+                <discovery.server-addr>172.26.85.32:8848</discovery.server-addr>
+                <sentinel.port>8719</sentinel.port>
+                <sentinel.dashboard>localhost:8080</sentinel.dashboard>
+            </properties>
+        </profile>
+        <profile>
+            <id>docker</id>
+            <properties>
+                <spring.active>docker</spring.active>
+                <config.server-addr>172.30.0.48:8848</config.server-addr>
+                <config.namespace></config.namespace>
+                <config.group>DEFAULT_GROUP</config.group>
+                <discovery.server-addr>172.30.0.48:8848</discovery.server-addr>
+                <sentinel.port>8719</sentinel.port>
+                <sentinel.dashboard>172.30.0.80:8088</sentinel.dashboard>
+            </properties>
+            <!--            <activation>-->
+            <!--                <activeByDefault>true</activeByDefault>-->
+            <!--            </activation>-->
+        </profile>
+    </profiles>
+
+
 
 </project>
