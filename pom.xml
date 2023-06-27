@@ -34,7 +34,7 @@
 
     <modules>
         <module>anly-sca-starter-dependencies</module>
-<!--        <module>anly-sca-starter-common</module>-->
+        <module>anly-sca-starter-common</module>
 <!--        <module>anly-sca-starter-database</module>-->
 <!--        <module>anly-sca-starter-dubbo</module>-->
 <!--        <module>anly-sca-starter-log</module>-->
