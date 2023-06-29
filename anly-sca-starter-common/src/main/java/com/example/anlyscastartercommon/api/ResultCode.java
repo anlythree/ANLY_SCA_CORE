@@ -1,6 +1,5 @@
-package com.example.anlyscastartercommon.enums;
+package com.example.anlyscastartercommon.api;
 
-import com.example.anlyscastartercommon.api.IResultCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

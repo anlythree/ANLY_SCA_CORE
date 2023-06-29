@@ -3,12 +3,12 @@ package com.example.anlyscastartercommon.constant;
 import lombok.experimental.UtilityClass;
 
 /**
- * Mate基本常量
+ * anly-sca基本常量
  *
  * @author pangu
  */
 @UtilityClass
-public class MateConstant {
+public class AnlyScaConstant {
 
 	/**
 	 * 应用版本号
