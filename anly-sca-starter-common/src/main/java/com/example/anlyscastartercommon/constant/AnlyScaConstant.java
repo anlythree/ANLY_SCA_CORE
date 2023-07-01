@@ -24,15 +24,15 @@ public class AnlyScaConstant {
 	/**
 	 * 默认为空消息
 	 */
-	public static final String DEFAULT_NULL_MESSAGE = "承载数据为空";
+	public static final String DEFAULT_NULL_MESSAGE = "empty data";
 	/**
 	 * 默认成功消息
 	 */
-	public static final String DEFAULT_SUCCESS_MESSAGE = "处理成功";
+	public static final String DEFAULT_SUCCESS_MESSAGE = "success";
 	/**
 	 * 默认失败消息
 	 */
-	public static final String DEFAULT_FAIL_MESSAGE = "处理失败";
+	public static final String DEFAULT_FAIL_MESSAGE = "fail";
 	/**
 	 * 树的根节点值
 	 */
