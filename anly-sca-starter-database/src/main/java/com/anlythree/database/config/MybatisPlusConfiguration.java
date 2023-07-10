@@ -1,5 +1,6 @@
 package com.anlythree.database.config;
 
+import com.anlythree.database.handler.AnlyObjectHandler;
 import com.anlythree.database.props.TenantProperties;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
@@ -7,8 +8,10 @@ import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
-import com.example.anlyscastartermybatis.interceptor.SqlLogInterceptor;
-import com.example.anlyscastartermybatis.props.AnlyMybatisProperties;
+import com.example.common.factory.YamlPropertySourceFactory;
+import com.example.mybatis.injector.AnlySqlInjector;
+import com.example.mybatis.interceptor.SqlLogInterceptor;
+import com.example.mybatis.props.AnlyMybatisProperties;
 import lombok.AllArgsConstructor;
 import org.apache.ibatis.type.EnumTypeHandler;
 import org.mybatis.spring.annotation.MapperScan;
@@ -34,8 +37,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @AllArgsConstructor
 @EnableTransactionManagement
 @EnableConfigurationProperties(AnlyMybatisProperties.class)
-@PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:mate-db.yml")
-@MapperScan("vip.mate.**.mapper.**")
+@PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:anly-db.yml")
+@MapperScan("com.anlythree.**.mapper.**")
 public class MybatisPlusConfiguration {
 
 	private final TenantProperties tenantProperties;
@@ -52,7 +55,7 @@ public class MybatisPlusConfiguration {
 	 */
 	@Bean
 	public ISqlInjector sqlInjector() {
-		return new MateSqlInjector();
+		return new AnlySqlInjector();
 	}
 
 	/**
@@ -91,9 +94,9 @@ public class MybatisPlusConfiguration {
 	 * 自动填充数据
 	 */
 	@Bean
-	@ConditionalOnMissingBean(MateMetaObjectHandler.class)
-	public MateMetaObjectHandler mateMetaObjectHandler() {
-		return new MateMetaObjectHandler();
+	@ConditionalOnMissingBean(AnlyObjectHandler.class)
+	public AnlyObjectHandler mateMetaObjectHandler() {
+		return new AnlyObjectHandler();
 	}
 
 

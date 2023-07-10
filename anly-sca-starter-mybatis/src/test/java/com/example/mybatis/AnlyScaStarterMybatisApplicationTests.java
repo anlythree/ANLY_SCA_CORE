@@ -1,9 +1,6 @@
-package com.example.anlyscastartermybatis;
+package com.example.mybatis;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.concurrent.Semaphore;
 
 //@SpringBootTest
 class AnlyScaStarterMybatisApplicationTests {

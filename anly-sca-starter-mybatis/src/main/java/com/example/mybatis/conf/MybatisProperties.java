@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.anlyscastartermybatis.conf;
+package com.example.mybatis.conf;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.example.anlyscastartermybatis.interceptor;
+package com.example.mybatis.interceptor;
 
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.core.toolkit.PluginUtils;

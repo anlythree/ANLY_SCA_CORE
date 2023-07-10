@@ -1,4 +1,4 @@
-package com.example.anlyscastartermybatis.props;
+package com.example.mybatis.props;
 
 import lombok.Getter;
 import lombok.Setter;
