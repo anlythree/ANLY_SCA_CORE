@@ -7,18 +7,14 @@
         <artifactId>anly-sca-core</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.anlythree</groupId>
-    <artifactId>anly-sca-starter-mybatis</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>anly-sca-starter-mybatis</name>
-    <description>mybatis的相关支持</description>
 
+    <artifactId>anly-sca-starter-mybatis</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <scope>provided</scope>
+<!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -36,14 +32,5 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

@@ -22,6 +22,11 @@
 			<artifactId>anly-sca-starter-common</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.anlythree</groupId>
+			<artifactId>anly-sca-starter-mybatis</artifactId>
+		</dependency>
+
 
 	</dependencies>
 

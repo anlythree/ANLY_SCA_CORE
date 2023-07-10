@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.12</version>
+        <version>2.7.13</version>
     </parent>
 
     <artifactId>anly-sca-starter-dependencies</artifactId>
@@ -34,7 +34,7 @@
         <oracle.connector.version>12.2.0.1</oracle.connector.version>
         <postgresql.connector.version>42.4.3</postgresql.connector.version>
         <druid.version>1.2.18</druid.version>
-        <mybatis.plus.version>3.5.2</mybatis.plus.version>
+        <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
         <mybaits.generator.version>3.4.1</mybaits.generator.version>
         <dynamic-datasource.version>3.5.2</dynamic-datasource.version>
 
@@ -99,6 +99,11 @@
 <!--                <artifactId>anly-sca-starter-cloud</artifactId>-->
 <!--                <version>${anly-sca-core.version}</version>-->
 <!--            </dependency>-->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>anly-sca-starter-mybatis</artifactId>
+                <version>${anly-sca-core.version}</version>
+            </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>anly-sca-starter-database</artifactId>
