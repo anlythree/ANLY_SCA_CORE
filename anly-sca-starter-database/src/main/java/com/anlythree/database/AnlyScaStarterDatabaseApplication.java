@@ -1,4 +1,4 @@
-package com.anlythree.anlyscastarterdatabase;
+package com.anlythree.database;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

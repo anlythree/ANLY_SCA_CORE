@@ -1,4 +1,4 @@
-package com.anlythree.anlyscastarterdatabase.entity;
+package com.anlythree.database.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
