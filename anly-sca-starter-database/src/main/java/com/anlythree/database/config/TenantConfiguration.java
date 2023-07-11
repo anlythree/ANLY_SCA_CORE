@@ -1,6 +1,5 @@
 package com.anlythree.database.config;
 
-import com.anlythree.database.props.TenantProperties;
 import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
 import com.example.common.context.TenantContextHolder;
@@ -9,7 +8,6 @@ import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.NullValue;
 import net.sf.jsqlparser.expression.StringValue;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
@@ -19,9 +17,8 @@ import org.springframework.context.annotation.Bean;
  * @author anlythree
  * @Date 2023-07-10
  */
-@AutoConfiguration
+@AutoConfiguration(before = MybatisPlusConfiguration.class)
 @AllArgsConstructor
-@AutoConfigureBefore(MybatisPlusConfiguration.class)
 @EnableConfigurationProperties(TenantProperties.class)
 public class TenantConfiguration {
 

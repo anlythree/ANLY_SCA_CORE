@@ -1,7 +1,6 @@
 package com.anlythree.database.config;
 
 import com.anlythree.database.handler.AnlyObjectHandler;
-import com.anlythree.database.props.TenantProperties;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;

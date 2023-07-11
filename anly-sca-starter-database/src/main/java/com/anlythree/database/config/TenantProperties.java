@@ -1,4 +1,4 @@
-package com.anlythree.database.props;
+package com.anlythree.database.config;
 
 import lombok.Getter;
 import lombok.Setter;
