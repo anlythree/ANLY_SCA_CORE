@@ -1,5 +1,6 @@
 package com.anlythree.database.config;
 
+import com.anlythree.database.config.props.TenantProperties;
 import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
 import com.example.common.context.TenantContextHolder;

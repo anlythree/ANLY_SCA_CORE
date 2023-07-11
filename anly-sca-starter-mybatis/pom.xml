@@ -31,6 +31,11 @@
             <artifactId>spring-cloud-context</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- 免手写Mapper、自动建表、数据自动填充、关联查询、冗余数据自动更新、动态条件 -->
+<!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-extension</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>
