@@ -1,4 +1,4 @@
-package com.example.mybatis.props;
+package com.anlythree.database.config.props;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,5 +1,8 @@
 package com.anlythree.database.config;
 
+import com.anlythree.database.config.injector.AnlySqlInjector;
+import com.anlythree.database.config.interceptor.SqlLogInterceptor;
+import com.anlythree.database.config.props.AnlyMybatisProperties;
 import com.anlythree.database.config.props.TenantProperties;
 import com.anlythree.database.handler.AnlyObjectHandler;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
@@ -9,9 +12,6 @@ import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInt
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
 import com.example.common.factory.YamlPropertySourceFactory;
-import com.example.mybatis.injector.AnlySqlInjector;
-import com.example.mybatis.interceptor.SqlLogInterceptor;
-import com.example.mybatis.props.AnlyMybatisProperties;
 import lombok.AllArgsConstructor;
 import org.apache.ibatis.type.EnumTypeHandler;
 import org.mybatis.spring.annotation.MapperScan;
@@ -37,7 +37,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @AllArgsConstructor
 @EnableTransactionManagement
 @EnableConfigurationProperties(AnlyMybatisProperties.class)
-@PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:anly-db.yml")
+@PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:anly-mybatisplus.yml")
 @MapperScan("com.anlythree.**.mapper.**")
 public class MybatisPlusConfiguration {
 

@@ -22,13 +22,23 @@
 			<groupId>com.anlythree</groupId>
 			<artifactId>anly-sca-starter-common</artifactId>
 		</dependency>
-		<!-- mybatis组件 -->
 		<dependency>
-			<groupId>com.anlythree</groupId>
-			<artifactId>anly-sca-starter-mybatis</artifactId>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
 		</dependency>
-
-		<!-- Druid -->
+		<!-- mybatis & mybatisplus组件 -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 免手写Mapper、自动建表、数据自动填充、关联查询、冗余数据自动更新、动态条件 -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-extension</artifactId>
+		</dependency>
+		<!-- druid -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
@@ -45,6 +55,21 @@
 			<artifactId>jakarta.servlet-api</artifactId>
 		</dependency>
 
+		<!-- 暂时引入，用来自测 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 
 	</dependencies>
 

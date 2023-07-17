@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.mybatis.log;
+package com.anlythree.database.config.log;
 
 import com.alibaba.druid.DbType;
 import com.alibaba.druid.filter.FilterChain;
@@ -24,7 +24,7 @@ import com.alibaba.druid.proxy.jdbc.ResultSetProxy;
 import com.alibaba.druid.proxy.jdbc.StatementProxy;
 import com.alibaba.druid.sql.SQLUtils;
 import com.alibaba.druid.util.StringUtils;
-import com.example.mybatis.conf.MybatisProperties;
+import com.anlythree.database.config.MybatisProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.mybatis.conf;
+package com.anlythree.database.config;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -29,7 +29,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 @Getter
 @Setter
 @RefreshScope
-@ConfigurationProperties("mate.mybatis")
+@ConfigurationProperties("anly.mybatis")
 public class MybatisProperties {
 	/**
 	 * 是否打印可执行 sql

@@ -1,4 +1,4 @@
-package com.example.mybatis.interceptor;
+package com.anlythree.database.config.interceptor;
 
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.core.toolkit.PluginUtils;
