@@ -3,23 +3,33 @@ spring:
     druid:
       enable: true
       # 从这里开始(druid)
-      username: ${mate.datasource.username}
-      password: ${mate.datasource.password}
+      url: ${spring.datasource.url}
       driver-class-name: ${spring.datasource.driver-class-name}
-      url: ${mate.datasource.url}
+      username: ${spring.datasource.username}
+      password: ${spring.datasource.password}
       db-type: mysql
       initialSize: 10
       minIdle: 10
       maxActive: 500
+      # 配置获取连接等待超时的时间
       max-wait: 60000
-      pool-prepared-statements: true
-      max-pool-prepared-statement-per-connection-size: 20
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      #配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
       validation-query: SELECT 'x'
       test-on-borrow: false
       test-on-return: false
       test-while-idle: true
-      time-between-eviction-runs-millis: 60000  #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
-      min-evictable-idle-time-millis: 300000    #配置一个连接在池中最小生存的时间，单位是毫秒
+      # 打开PSCache，并且指定每个连接上PSCache的大小
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      schema-username: anlythree
+      # 合并多个DruidDataSource的监控数据
+      #useGlobalDataSourceStat: true
       filters: stat,wall
       filter:
         wall:
@@ -29,7 +39,6 @@ spring:
             multiStatementAllow: true
             noneBaseStatementAllow: true
       # 从这里结束(druid)
-
       # StatViewServlet配置
       web-stat-filter:
         enabled: true

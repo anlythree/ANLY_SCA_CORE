@@ -31,10 +31,10 @@ import java.util.*;
 })
 public class SqlLogInterceptor implements Interceptor {
 	private static final String DRUID_POOLED_PREPARED_STATEMENT = "com.alibaba.druid.pool.DruidPooledPreparedStatement";
-	private static final String T4C_PREPARED_STATEMENT = "oracle.jdbc.driver.T4CPreparedStatement";
-	private static final String ORACLE_PREPARED_STATEMENT_WRAPPER = "oracle.jdbc.driver.OraclePreparedStatementWrapper";
+//	private static final String T4C_PREPARED_STATEMENT = "oracle.jdbc.driver.T4CPreparedStatement";
+//	private static final String ORACLE_PREPARED_STATEMENT_WRAPPER = "oracle.jdbc.driver.OraclePreparedStatementWrapper";
 
-	private Method oracleGetOriginalSqlMethod;
+//	private Method oracleGetOriginalSqlMethod;
 	private Method druidGetSqlMethod;
 
 	@Override
@@ -52,14 +52,14 @@ public class SqlLogInterceptor implements Interceptor {
 		} catch (Exception e) {
 			// do nothing
 		}
-		if (stmtMetaObj.hasGetter("delegate")) {
-			//Hikari
-			try {
-				statement = (Statement) stmtMetaObj.getValue("delegate");
-			} catch (Exception ignored) {
-
-			}
-		}
+//		if (stmtMetaObj.hasGetter("delegate")) {
+//			//Hikari
+//			try {
+//				statement = (Statement) stmtMetaObj.getValue("delegate");
+//			} catch (Exception ignored) {
+//
+//			}
+//		}
 
 		String originalSql = null;
 		String stmtClassName = statement.getClass().getName();
@@ -77,33 +77,34 @@ public class SqlLogInterceptor implements Interceptor {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if (T4C_PREPARED_STATEMENT.equals(stmtClassName)
-				|| ORACLE_PREPARED_STATEMENT_WRAPPER.equals(stmtClassName)) {
-			// oracle数据连接
-			try {
-				if (oracleGetOriginalSqlMethod != null) {
-					Object stmtSql = oracleGetOriginalSqlMethod.invoke(statement);
-					if (stmtSql instanceof String) {
-						originalSql = (String) stmtSql;
-					}
-				} else {
-					Class<?> clazz = Class.forName(stmtClassName);
-					oracleGetOriginalSqlMethod = getMethodRegular(clazz, "getOriginalSql");
-					if (oracleGetOriginalSqlMethod != null) {
-						//OraclePreparedStatementWrapper is not a public class, need set this.
-						oracleGetOriginalSqlMethod.setAccessible(true);
-						if (null != oracleGetOriginalSqlMethod) {
-							Object stmtSql = oracleGetOriginalSqlMethod.invoke(statement);
-							if (stmtSql instanceof String) {
-								originalSql = (String) stmtSql;
-							}
-						}
-					}
-				}
-			} catch (Exception e) {
-				//ignore
-			}
 		}
+//		else if (T4C_PREPARED_STATEMENT.equals(stmtClassName)
+//				|| ORACLE_PREPARED_STATEMENT_WRAPPER.equals(stmtClassName)) {
+//			// oracle数据连接
+//			try {
+//				if (oracleGetOriginalSqlMethod != null) {
+//					Object stmtSql = oracleGetOriginalSqlMethod.invoke(statement);
+//					if (stmtSql instanceof String) {
+//						originalSql = (String) stmtSql;
+//					}
+//				} else {
+//					Class<?> clazz = Class.forName(stmtClassName);
+//					oracleGetOriginalSqlMethod = getMethodRegular(clazz, "getOriginalSql");
+//					if (oracleGetOriginalSqlMethod != null) {
+//						//OraclePreparedStatementWrapper is not a public class, need set this.
+//						oracleGetOriginalSqlMethod.setAccessible(true);
+//						if (null != oracleGetOriginalSqlMethod) {
+//							Object stmtSql = oracleGetOriginalSqlMethod.invoke(statement);
+//							if (stmtSql instanceof String) {
+//								originalSql = (String) stmtSql;
+//							}
+//						}
+//					}
+//				}
+//			} catch (Exception e) {
+//				//ignore
+//			}
+//		}
 		if (originalSql == null) {
 			originalSql = statement.toString();
 		}
