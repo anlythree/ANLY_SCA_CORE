@@ -1,4 +1,4 @@
-package com.anlythree.anlymysql.business.user.DO;
+package com.anlythree.anlymysql.business.user.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

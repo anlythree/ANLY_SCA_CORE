@@ -1,6 +1,6 @@
 package com.anlythree.anlymysql.business.user.controller;
 
-import com.anlythree.anlymysql.business.user.DO.UserDO;
+import com.anlythree.anlymysql.business.user.entity.UserDO;
 import com.anlythree.anlymysql.business.user.param.GetUserListParam;
 import com.anlythree.anlymysql.business.user.service.UserService;
 import com.anlythree.common.api.Result;
@@ -24,11 +24,6 @@ public class DemoController {
     @PostMapping("/getUserList")
     @ResponseBody
     public Result<List<UserDO>> getUserList(@RequestBody GetUserListParam param){
-        List<UserDO> userDOList = userService.lambdaQuery()
-                .lt(UserDO::getVersion, param.getStartVersion())
-                .gt(UserDO::getVersion, param.getEndVersion())
-                .orderByAsc(UserDO::getId)
-                .list();
-        return Result.data(userDOList);
+        return Result.data(userService.getUserList(param));
     }
 }

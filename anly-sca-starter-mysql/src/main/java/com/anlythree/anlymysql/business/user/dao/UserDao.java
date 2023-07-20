@@ -1,6 +1,6 @@
 package com.anlythree.anlymysql.business.user.dao;
 
-import com.anlythree.anlymysql.business.user.DO.UserDO;
+import com.anlythree.anlymysql.business.user.entity.UserDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 
