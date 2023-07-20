@@ -1,4 +1,4 @@
-package com.anlythree.anlymysql.config;
+package com.anlythree.anlymysql.config.mybatis;
 
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.springframework.boot.autoconfigure.AutoConfiguration;

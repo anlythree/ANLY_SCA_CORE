@@ -1,4 +1,4 @@
-package com.anlythree.anlymysql.config.injector;
+package com.anlythree.anlymysql.config.mybatis.injector;
 
 import com.baomidou.mybatisplus.core.injector.DefaultSqlInjector;
 

@@ -1,4 +1,4 @@
-package com.anlythree.anlymysql.config;
+package com.anlythree.anlymysql.config.druid;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
