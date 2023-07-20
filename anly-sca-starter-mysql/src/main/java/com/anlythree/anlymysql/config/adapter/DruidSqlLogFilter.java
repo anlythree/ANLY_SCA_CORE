@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.anlythree.anlymysql.config.log;
+package com.anlythree.anlymysql.config.adapter;
 
 import com.alibaba.druid.DbType;
 import com.alibaba.druid.filter.FilterChain;
@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 打印可执行的 sql 日志
+ * 过滤器 打印可执行的 sql 日志
  *
  * <p>
  * 参考：https://jfinal.com/share/2204

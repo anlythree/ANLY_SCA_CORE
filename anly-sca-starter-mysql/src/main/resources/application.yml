@@ -33,4 +33,7 @@ spring:
 #      connection-properties: config.decrypt=true;config.decrypt.key=${anly.public-key}
 #      filter:
 #        config:
+anly:
+  mybatis:
+    sql: true
 #          enabled: true

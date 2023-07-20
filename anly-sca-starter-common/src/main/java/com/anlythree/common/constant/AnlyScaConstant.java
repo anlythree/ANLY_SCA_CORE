@@ -42,6 +42,9 @@ public class AnlyScaConstant {
 	 */
 	public static final String[] VALID_FILE_TYPE = {"xlsx", "zip"};
 
+	/**
+	 * 时间格式
+	 */
 	public static final String DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
 	/**
@@ -95,9 +98,9 @@ public class AnlyScaConstant {
 	public static final String JSON_UTF8 = "application/json;charset=UTF-8";
 
 
-	public static final String CONFIG_DATA_ID_DYNAMIC_ROUTES = "mate-dynamic-routes.yaml";
-	public static final String CONFIG_GROUP = "DEFAULT_GROUP";
-	public static final long CONFIG_TIMEOUT_MS = 5000;
+//	public static final String CONFIG_DATA_ID_DYNAMIC_ROUTES = "mate-dynamic-routes.yaml";
+//	public static final String CONFIG_GROUP = "DEFAULT_GROUP";
+//	public static final long CONFIG_TIMEOUT_MS = 5000;
 
 
 }
