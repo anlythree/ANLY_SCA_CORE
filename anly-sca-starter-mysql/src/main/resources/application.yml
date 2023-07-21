@@ -1,6 +1,10 @@
 server:
   servlet:
     context-path: /
+    encoding:
+      enabled: true
+      charset: utf-8
+      force: true
   tomcat:
     max-threads: 1000
     min-spare-threads: 30
@@ -8,11 +12,6 @@ server:
   uri-encoding: utf-8
 # DataSource ConfigloginFailuresNumber
 spring:
-  http:
-    encoding:
-      force: true
-      charset: utf-8
-      enabled: true
   application:
     name: anly-sca-mysqlDirectConnect
   servlet:

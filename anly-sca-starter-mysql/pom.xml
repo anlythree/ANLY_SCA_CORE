@@ -7,11 +7,8 @@
 		<artifactId>anly-sca-core</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>anly-sca-starter-mysql</artifactId>
 
-	<properties>
-		<java.version>8</java.version>
-	</properties>
+	<artifactId>anly-sca-starter-mysql</artifactId>
 
 	<dependencies>
 		<!-- 基础组件 -->

@@ -1,5 +1,6 @@
 package com.anlythree.anlymysql.config.mybatis.interceptor;
 
+import com.alibaba.druid.pool.DruidPooledPreparedStatement;
 import com.anlythree.common.exception.BaseException;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.core.toolkit.PluginUtils;
@@ -44,34 +45,14 @@ public class SqlLogInterceptor implements Interceptor {
 		} else {
 			statement = (Statement) firstArg;
 		}
-		MetaObject stmtMetaObj = SystemMetaObject.forObject(statement);
-		try {
-			statement = (Statement) stmtMetaObj.getValue("stmt.statement");
-		} catch (Exception e) {
-			log.error("【判断数据库连接框架出错】"+e.getMessage());
-		}
 
-		String originalSql = null;
+		String originalSql;
 		String stmtClassName = statement.getClass().getName();
 		if (DRUID_POOLED_PREPARED_STATEMENT.equals(stmtClassName)) {
-			// druid
-			try {
-				if (druidGetSqlMethod == null) {
-					Class<?> clazz = Class.forName(DRUID_POOLED_PREPARED_STATEMENT);
-					druidGetSqlMethod = clazz.getMethod("getSql");
-				}
-				Object stmtSql = druidGetSqlMethod.invoke(statement);
-				if (stmtSql instanceof String) {
-					originalSql = (String) stmtSql;
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			DruidPooledPreparedStatement druidStatement = (DruidPooledPreparedStatement)statement;
+			originalSql = druidStatement.getSql();
 		}else {
 			throw new BaseException("框架暂不支持除druid之外的连接方式");
-		}
-		if (originalSql == null) {
-			originalSql = statement.toString();
 		}
 		originalSql = originalSql.replaceAll("[\\s]+", StringPool.SPACE);
 		int index = indexOfSqlStart(originalSql);

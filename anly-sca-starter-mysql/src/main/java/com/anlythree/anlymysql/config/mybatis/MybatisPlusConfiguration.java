@@ -34,10 +34,10 @@ import java.util.List;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @Configuration
 @AllArgsConstructor
-//@EnableTransactionManagement
-//@EnableConfigurationProperties(AnlyMybatisProperties.class)
-//@PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:anly-mybatisplus.yml")
-//@MapperScan("com.anlythree.**.mapper.**")
+@EnableTransactionManagement
+@EnableConfigurationProperties(AnlyMybatisProperties.class)
+@PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:anly-mybatisplus.yml")
+@MapperScan("com.anlythree.**.mapper.**")
 public class MybatisPlusConfiguration {
 
 
@@ -54,7 +54,7 @@ public class MybatisPlusConfiguration {
 	 */
 	@Bean
 //	@Profile({"local", "dev", "test"})
-	@ConditionalOnProperty(value = "anly.mybatis.sql", matchIfMissing = true)
+	@ConditionalOnProperty(value = "anly.mybatis.sql")
 	public SqlLogInterceptor sqlLogInterceptor() {
 		return new SqlLogInterceptor();
 	}
