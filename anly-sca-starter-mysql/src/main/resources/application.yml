@@ -1,38 +1,38 @@
-server:
-  servlet:
-    context-path: /
-    encoding:
-      enabled: true
-      charset: utf-8
-      force: true
-  tomcat:
-    max-threads: 1000
-    min-spare-threads: 30
-  port: 8322
-  uri-encoding: utf-8
-# DataSource ConfigloginFailuresNumber
-spring:
-  application:
-    name: anly-sca-mysqlDirectConnect
-  servlet:
-    # 上传文件配置
-    multipart:
-      enabled: true
-      max-file-size: 50MB
-      max-request-size: 100MB
-  datasource:
-    druid:
-      enable: true
-      # 从这里开始(druid)
-      url: jdbc:mysql://43.132.185.144/anly_database?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      username: root
-      password: Anly233!
-#      todo-anlythree 暂时不使用druid的用户名密码加密配置，后续会放开
-#      connection-properties: config.decrypt=true;config.decrypt.key=${anly.public-key}
-#      filter:
-#        config:
-anly:
-  mybatis:
-    sql: true
-#          enabled: true
+#server:
+#  servlet:
+#    context-path: /
+#    encoding:
+#      enabled: true
+#      charset: utf-8
+#      force: true
+#  tomcat:
+#    max-threads: 1000
+#    min-spare-threads: 30
+#  port: 8322
+#  uri-encoding: utf-8
+## DataSource ConfigloginFailuresNumber
+#spring:
+#  application:
+#    name: anly-sca-mysqlDirectConnect
+#  servlet:
+#    # 上传文件配置
+#    multipart:
+#      enabled: true
+#      max-file-size: 50MB
+#      max-request-size: 100MB
+#  datasource:
+#    druid:
+#      enable: true
+#      # 从这里开始(druid)
+#      url: jdbc:mysql://43.132.185.144/anly_database?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      username: root
+#      password: Anly233!
+##      todo-anlythree 暂时不使用druid的用户名密码加密配置，后续会放开
+##      connection-properties: config.decrypt=true;config.decrypt.key=${anly.public-key}
+##      filter:
+##        config:
+#anly:
+#  mybatis:
+#    sql: true
+##          enabled: true
