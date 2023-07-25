@@ -62,6 +62,3 @@ spring:
         allow: 127.0.0.1
         # IP黑名单 (存在共同时，deny优先于allow)
         deny: 192.168.0.1
-#server:
-#  servlet:
-#    context-path: /mate
