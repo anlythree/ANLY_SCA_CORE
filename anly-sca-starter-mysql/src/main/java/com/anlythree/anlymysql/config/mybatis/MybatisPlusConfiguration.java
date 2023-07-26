@@ -32,7 +32,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableConfigurationProperties(AnlyMybatisProperties.class)
 @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:anly-mybatisplus.yml")
-@MapperScan({"com.anlythree.**.mapper.**","com.anlythree.**.bussiness.*.dao"})
+@MapperScan({"com.anlythree.**.mapper.**","com.anlythree.anlymysql.business.*.dao"})
 public class MybatisPlusConfiguration {
 
 

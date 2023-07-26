@@ -13,7 +13,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 @Getter
 @Setter
 @RefreshScope
-@ConfigurationProperties("mate.mybatis")
+@ConfigurationProperties("anly.mybatis")
 public class AnlyMybatisProperties {
     /**
      * 是否打印可执行 sql
