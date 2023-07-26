@@ -65,7 +65,7 @@
         <postgresql.connector.version>42.4.3</postgresql.connector.version>
         <druid.version>1.2.18</druid.version>
         <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
-        <mybaits.generator.version>3.4.1</mybaits.generator.version>
+        <mybaits.generator.version>3.5.3.1</mybaits.generator.version>
         <dynamic-datasource.version>3.5.2</dynamic-datasource.version>
 
         <jjwt.version>0.9.1</jjwt.version>

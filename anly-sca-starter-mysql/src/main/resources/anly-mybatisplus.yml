@@ -2,7 +2,7 @@
 mybatis-plus:
   mapper-locations: classpath:com/anlythree/**/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.anlythree.**.entity
+  typeAliasesPackage: com.anlythree.**.business.**.entity
   #typeEnumsPackage: vip.mate.dashboard.entity.enums
   global-config:
     # 关闭MP3.0自带的banner

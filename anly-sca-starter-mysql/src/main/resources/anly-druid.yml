@@ -8,8 +8,8 @@ spring:
       username: ${spring.datasource.username}
       password: ${spring.datasource.password}
       db-type: mysql
-      initialSize: 10
-      minIdle: 10
+      initialSize: 1
+      minIdle: 1
       maxActive: 500
       # 配置获取连接等待超时的时间
       max-wait: 60000
