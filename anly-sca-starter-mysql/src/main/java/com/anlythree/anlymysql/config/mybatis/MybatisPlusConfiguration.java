@@ -32,7 +32,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author xuzhanfu
  * @author L.cm
  */
-@Order
 @Configuration
 @AllArgsConstructor
 @EnableTransactionManagement
