@@ -9,18 +9,6 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class AnlyScaConstant {
-
-	/**
-	 * 应用版本号
-	 */
-	public static final String MATE_APP_VERSION = "0.0.1-SNAPSHOT";
-
-	/**
-	 * Spring 应用名 prop key
-	 */
-	public static final String SPRING_APP_NAME_KEY = "spring.application.name";
-
-
 	/**
 	 * 默认为空消息
 	 */
@@ -48,9 +36,14 @@ public class AnlyScaConstant {
 	public static final String DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
 	/**
+	 * 时间格式
+	 */
+	public static final String DATE_FORMAT = "yyyy-MM-dd";
+
+	/**
 	 * 微服务之间传递的唯一标识
 	 */
-	public static final String MATE_TRACE_ID = "mate-trace-id";
+	public static final String ANLY_TRACE_ID = "anly-trace-id";
 
 	/**
 	 * 日志链路追踪id日志标志
@@ -97,10 +90,6 @@ public class AnlyScaConstant {
 	 */
 	public static final String JSON_UTF8 = "application/json;charset=UTF-8";
 
-
-//	public static final String CONFIG_DATA_ID_DYNAMIC_ROUTES = "mate-dynamic-routes.yaml";
-//	public static final String CONFIG_GROUP = "DEFAULT_GROUP";
-//	public static final long CONFIG_TIMEOUT_MS = 5000;
 
 
 }

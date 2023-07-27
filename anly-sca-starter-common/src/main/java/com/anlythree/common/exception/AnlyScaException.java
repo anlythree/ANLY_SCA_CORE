@@ -9,17 +9,17 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
  *
  * @author pangu
  */
-public class BaseException extends RuntimeException {
+public class AnlyScaException extends RuntimeException {
 
 	private static final long serialVersionUID = 5782968730281544562L;
 
 	private int status = INTERNAL_SERVER_ERROR.value();
 
-	public BaseException(String message) {
+	public AnlyScaException(String message) {
 		super(message);
 	}
 
-	public BaseException(HttpStatus status, String message) {
+	public AnlyScaException(HttpStatus status, String message) {
 		super(message);
 		this.status = status.value();
 	}

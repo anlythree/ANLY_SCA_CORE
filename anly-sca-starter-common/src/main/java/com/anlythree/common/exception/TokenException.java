@@ -5,7 +5,7 @@ package com.anlythree.common.exception;
  *
  * @author xuzhanfu
  */
-public class TokenException extends RuntimeException {
+public class TokenException extends AnlyScaException {
 
 	private static final long serialVersionUID = -109638013567525177L;
 

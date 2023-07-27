@@ -16,7 +16,8 @@ import java.time.LocalDateTime;
 @Accessors(chain = true)
 @Schema(name = "CommonLog对象", description = "普通日志封装")
 public class CommonLog implements Serializable {
-	private static final long serialVersionUID = 1L;
+
+	private static final long serialVersionUID = -3928701839209884454L;
 
 	/**
 	 * 日志类型

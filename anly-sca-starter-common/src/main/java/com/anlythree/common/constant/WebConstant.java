@@ -75,7 +75,7 @@ public class WebConstant {
     /**
      * 请求类型
      */
-    public enum Type {
+    public enum RequestType {
 
         LOOKUP_RMI("rmi:", "RMI 远程方法调用"),
         LOOKUP_LDAP("ldap:", "LDAP 远程方法调用"),
@@ -88,7 +88,7 @@ public class WebConstant {
         private final String code;
         private final String info;
 
-        Type(String code, String info) {
+        RequestType(String code, String info) {
             this.code = code;
             this.info = info;
         }

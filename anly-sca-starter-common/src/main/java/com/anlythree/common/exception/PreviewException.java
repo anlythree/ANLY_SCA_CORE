@@ -5,7 +5,7 @@ package com.anlythree.common.exception;
  *
  * @author pangu
  */
-public class PreviewException extends RuntimeException {
+public class PreviewException extends AnlyScaException {
 
 	private static final long serialVersionUID = 6889855134686307145L;
 

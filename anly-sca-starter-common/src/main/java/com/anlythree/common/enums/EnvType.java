@@ -24,6 +24,8 @@ public enum EnvType {
 	LOCAL("local"),
 	DEV("dev"),
 	TEST("test"),
+	GRAY("gray"),
+	PRERELEASE("prerelease"),
 	PROD("prod"),
 	DOCKER("docker");
 

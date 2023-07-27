@@ -5,7 +5,7 @@ package com.anlythree.common.exception;
  *
  * @author pangu
  */
-public class CaptchaException extends Exception {
+public class CaptchaException extends AnlyScaException {
 
 	private static final long serialVersionUID = -6550886498142636261L;
 

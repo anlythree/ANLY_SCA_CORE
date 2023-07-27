@@ -4,16 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * 方法类型
+ * 请求类型
  *
- * @author pangu
+ * @author anlythree
  */
 @Getter
 @AllArgsConstructor
 public enum MethodType {
 
 	/**
-	 * 方法类型
+	 * 请求类型
 	 * GET
 	 * PUT
 	 * POST
