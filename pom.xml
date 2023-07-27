@@ -6,7 +6,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.14</version>
+        <!-- 当前版本经过验证，2.7.14会报错程序包org.springframework.beans.factory.annotation不存在 -->
+        <version>2.7.12</version>
     </parent>
 
     <groupId>com.anlythree</groupId>
@@ -47,7 +48,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
-        <spring.boot.version>2.7.14</spring.boot.version>
+        <spring.boot.version>2.7.12</spring.boot.version>
         <spring.cloud.version>2021.0.7</spring.cloud.version>
         <spring-boot-admin.version>2.7.10</spring-boot-admin.version>
         <spring.security.version>2.6.6</spring.security.version>
