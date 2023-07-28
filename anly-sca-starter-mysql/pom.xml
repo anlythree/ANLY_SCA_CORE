@@ -15,6 +15,7 @@
 		<dependency>
 			<groupId>com.anlythree</groupId>
 			<artifactId>anly-sca-starter-common</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<!-- mybatis & mybatisPlus组件 -->
 		<dependency>

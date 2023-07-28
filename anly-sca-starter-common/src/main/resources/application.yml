@@ -1,0 +1,17 @@
+server:
+  servlet:
+    context-path: /
+    encoding:
+      enabled: true
+      charset: utf-8
+      force: true
+    # ??????
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 100MB
+  tomcat:
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 8322
+  uri-encoding: utf-8
