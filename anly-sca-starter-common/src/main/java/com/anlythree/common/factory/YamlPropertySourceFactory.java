@@ -16,7 +16,7 @@ import java.util.Properties;
  * 这里简短解释下为什么要自定义factory来加载：
  * 因为如果要用@PropertySource来读取yml文件会读取不到，因为默认的factory只能解析properties文件，所以只能手动自定义一个factory
  *
- * @author aristotle
+ * @author anlythree
  * @link https://blog.csdn.net/zxl8899/article/details/106382719/
  */
 @AllArgsConstructor

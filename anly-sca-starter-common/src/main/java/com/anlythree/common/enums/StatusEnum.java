@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * 公共状态，一般用来表示开启和关闭
  *
- * @author aaronuu
+ * @author anlythree
  */
 @Getter
 public enum StatusEnum {

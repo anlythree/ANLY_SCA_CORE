@@ -4,7 +4,7 @@ package com.anlythree.common.exception;
 /**
  * 获取锁处理异常
  *
- * @author zhangyu
+ * @author anlythree
  */
 public class RedissonLockException extends AnlyScaException {
 

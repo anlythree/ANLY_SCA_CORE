@@ -2,7 +2,7 @@ package com.anlythree.common.constant;
 
 /**
  * 多租户常量
- * @author pangu
+ * @author anlythree
  * @date 2020-9-7
  */
 public interface TenantConstant {

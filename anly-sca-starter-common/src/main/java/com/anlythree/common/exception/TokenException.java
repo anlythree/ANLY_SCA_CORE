@@ -3,7 +3,7 @@ package com.anlythree.common.exception;
 /**
  * Token处理异常
  *
- * @author xuzhanfu
+ * @author anlythree
  */
 public class TokenException extends AnlyScaException {
 

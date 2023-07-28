@@ -5,7 +5,7 @@ import lombok.experimental.UtilityClass;
 /**
  * 组件参数
  *
- * @author pangu
+ * @author anlythree
  */
 @UtilityClass
 public class ComponentConstant {

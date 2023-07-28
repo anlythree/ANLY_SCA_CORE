@@ -3,7 +3,7 @@ package com.anlythree.common.api;
 /**
  * 返回码接口
  *
- * @author pangu
+ * @author anlythree
  */
 public interface IResultCode {
 

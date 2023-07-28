@@ -3,7 +3,7 @@ package com.anlythree.common.exception;
 /**
  * 验证码异常
  *
- * @author pangu
+ * @author anlythree
  */
 public class CaptchaException extends AnlyScaException {
 

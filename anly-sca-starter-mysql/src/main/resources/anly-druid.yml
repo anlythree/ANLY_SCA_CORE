@@ -4,7 +4,7 @@ spring:
       enable: true
       # 从这里开始(druid)
       url: ${spring.datasource.url}
-      driver-class-name: ${spring.datasource.driver-class-name}
+      driver-class-name: com.mysql.cj.jdbc.Driver
       username: ${spring.datasource.username}
       password: ${spring.datasource.password}
       db-type: mysql

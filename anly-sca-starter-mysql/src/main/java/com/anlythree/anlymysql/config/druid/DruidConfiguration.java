@@ -12,7 +12,7 @@ import org.springframework.context.annotation.PropertySource;
 /**
  * Druid配置
  *
- * @author pangu
+ * @author anlythree
  */
 @AutoConfiguration
 @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:anly-druid.yml")

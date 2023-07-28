@@ -12,7 +12,7 @@ import java.math.BigInteger;
 /**
  * 序列化和反序列化配置
  *
- * @author pangu
+ * @author anlythree
  * @link https://www.cnblogs.com/asker009/p/12888388.html
  */
 @AutoConfiguration

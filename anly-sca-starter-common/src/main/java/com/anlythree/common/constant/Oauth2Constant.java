@@ -19,7 +19,7 @@ package com.anlythree.common.constant;
 /**
  * 认证URL常量
  *
- * @author xuzhanfu
+ * @author anlythree
  * @date 2019-10-10 17:46
  **/
 public class Oauth2Constant {

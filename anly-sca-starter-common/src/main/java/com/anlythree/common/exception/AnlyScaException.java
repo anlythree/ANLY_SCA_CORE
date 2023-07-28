@@ -10,7 +10,7 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 /**
  * 通用异常
  *
- * @author pangu
+ * @author anlythree
  */
 @Data
 @EqualsAndHashCode(callSuper=true)

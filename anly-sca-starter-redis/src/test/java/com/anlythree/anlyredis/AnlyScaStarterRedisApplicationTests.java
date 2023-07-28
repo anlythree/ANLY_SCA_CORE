@@ -1,10 +1,10 @@
-package com.anlythree.anlyscastarterlog;
+package com.anlythree.anlyredis;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AnlyScaStarterLogApplicationTests {
+class AnlyScaStarterRedisApplicationTests {
 
 	@Test
 	void contextLoads() {

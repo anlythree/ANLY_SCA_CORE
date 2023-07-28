@@ -3,7 +3,7 @@ package com.anlythree.common.exception;
 /**
  * 演示环境异常
  *
- * @author pangu
+ * @author anlythree
  */
 public class PreviewException extends AnlyScaException {
 

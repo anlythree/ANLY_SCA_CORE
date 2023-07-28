@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 环境常量
  *
- * @author pangu
+ * @author anlythree
  */
 
 @Getter

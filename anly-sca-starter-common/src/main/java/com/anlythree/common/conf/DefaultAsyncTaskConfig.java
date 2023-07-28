@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 /**
  * 异步任务配置
  *
- * @author xuzhanfu
+ * @author anlythree
  */
 @Data
 @EnableAsync(proxyTargetClass = true)

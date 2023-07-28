@@ -12,7 +12,7 @@ import java.io.Serializable;
  * 统一响应消息报文
  *
  * @param <T> 　T对象
- * @author pangu
+ * @author anlythree
  */
 @Data
 @Getter

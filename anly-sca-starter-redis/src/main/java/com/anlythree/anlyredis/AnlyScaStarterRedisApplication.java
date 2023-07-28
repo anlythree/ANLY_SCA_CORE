@@ -1,13 +1,13 @@
-package com.anlythree.anlyscastarterlog;
+package com.anlythree.anlyredis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AnlyScaStarterLogApplication {
+public class AnlyScaStarterRedisApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AnlyScaStarterLogApplication.class, args);
+		SpringApplication.run(AnlyScaStarterRedisApplication.class, args);
 	}
 
 }

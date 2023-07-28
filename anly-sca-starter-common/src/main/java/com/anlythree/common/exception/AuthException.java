@@ -3,7 +3,7 @@ package com.anlythree.common.exception;
 /**
  * 认证异常
  *
- * @author pangu
+ * @author anlythree
  */
 public class AuthException extends AnlyScaException {
 

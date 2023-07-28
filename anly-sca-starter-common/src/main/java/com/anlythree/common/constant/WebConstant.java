@@ -3,7 +3,7 @@ package com.anlythree.common.constant;
 /**
  * 网络通信常量，包括枚举类
  *
- * @author david
+ * @author anlythree
  */
 public class WebConstant {
 

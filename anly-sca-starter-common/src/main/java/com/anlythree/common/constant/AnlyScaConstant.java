@@ -5,7 +5,7 @@ import lombok.experimental.UtilityClass;
 /**
  * anly-sca基本常量
  *
- * @author pangu
+ * @author anlythree
  */
 @UtilityClass
 public class AnlyScaConstant {

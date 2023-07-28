@@ -5,7 +5,7 @@ import lombok.experimental.UtilityClass;
 /**
  * 系统管理缓存name
  *
- * @author pangu
+ * @author anlythree
  * 2020-7-4
  */
 @UtilityClass
