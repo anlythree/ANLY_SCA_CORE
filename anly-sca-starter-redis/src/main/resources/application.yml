@@ -1,9 +1,3 @@
 spring:
-  application:
-    name: anly-sca-redis-self-test
   redis:
-    #????
-    host: 43.132.185.144
-    port: 24505
-    password: 132Anly132
     ssl: false

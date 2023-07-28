@@ -46,21 +46,22 @@ public class RedisConfiguration {
 		RedisTemplate template = new RedisTemplate();
 		template.setConnectionFactory(factory);
 
-		Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<Object>(Object.class);
-		ObjectMapper om = new ObjectMapper();
-		om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-		om.activateDefaultTyping(om.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL);
-		jackson2JsonRedisSerializer.setObjectMapper(om);
+		// 暂时不使用json的序列化方式
+//		Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<Object>(Object.class);
+//		ObjectMapper om = new ObjectMapper();
+//		om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
+//		om.activateDefaultTyping(om.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL);
+//		jackson2JsonRedisSerializer.setObjectMapper(om);
 
 		StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
 		// key采用String的序列化方式
 		template.setKeySerializer(stringRedisSerializer);
 		// hash的key也采用String的序列化方式
 		template.setHashKeySerializer(stringRedisSerializer);
-		// value序列化方式采用jackson
-		template.setValueSerializer(jackson2JsonRedisSerializer);
-		// hash的value序列化方式采用jackson
-		template.setHashValueSerializer(jackson2JsonRedisSerializer);
+		// value序列化方式采用String
+		template.setValueSerializer(stringRedisSerializer);
+		// hash的value序列化方式采用String
+		template.setHashValueSerializer(stringRedisSerializer);
 		template.afterPropertiesSet();
 		return template;
 	}
