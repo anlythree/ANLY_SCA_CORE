@@ -12,7 +12,7 @@
 
     <groupId>com.anlythree</groupId>
     <artifactId>anly-sca-core</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1-release</version>
     <packaging>pom</packaging>
     <name>anly-sca-core</name>
     <description>a microservice core components based on Spring Cloud Alibaba</description>
@@ -36,12 +36,11 @@
     <modules>
         <module>anly-sca-starter-common</module>
         <module>anly-sca-starter-mysql</module>
-<!--        <module>anly-sca-starter-log</module>-->
-<!--        <module>anly-sca-starter-redis</module>-->
+        <module>anly-sca-starter-redis</module>
     </modules>
 
     <properties>
-        <anly-sca-core.version>0.0.1-SNAPSHOT</anly-sca-core.version>
+        <anly-sca-core.version>0.0.1-release</anly-sca-core.version>
 
         <java.version>8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

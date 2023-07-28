@@ -5,10 +5,11 @@
 	<parent>
 		<groupId>com.anlythree</groupId>
 		<artifactId>anly-sca-core</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1-release</version>
 	</parent>
 
 	<artifactId>anly-sca-starter-mysql</artifactId>
+	<version>0.0.1-release</version>
 
 	<dependencies>
 		<!-- 基础组件 -->
