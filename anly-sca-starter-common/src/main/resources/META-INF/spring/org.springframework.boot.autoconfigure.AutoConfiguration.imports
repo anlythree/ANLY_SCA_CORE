@@ -1,1 +1,2 @@
 com.anlythree.runner.PrintApplicationNameRunner
+com.anlythree.common.exception.handler.AnlyScaExceptionHandler

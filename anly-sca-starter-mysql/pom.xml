@@ -16,7 +16,7 @@
 			<groupId>com.anlythree</groupId>
 			<artifactId>anly-sca-starter-common</artifactId>
 		</dependency>
-		<!-- mybatis & mybatisplus组件 -->
+		<!-- mybatis & mybatisPlus组件 -->
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
