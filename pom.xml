@@ -37,6 +37,8 @@
         <module>anly-sca-starter-common</module>
         <module>anly-sca-starter-mysql</module>
         <module>anly-sca-starter-redis</module>
+        <module>anly-sca-starter-kafka</module>
+
     </modules>
 
     <properties>
