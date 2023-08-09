@@ -16,8 +16,8 @@ spring:
 #      default-binder: kafka
       kafka:
         binder:
-          brokers: localhost:9092
-          zk-nodes: localhost:2181
+          brokers: ${spring.cloud.stream.kafka.binder.brokers}
+          zk-nodes: ${spring.cloud.stream.kafka.binder.zk-nodes}
           auto-create-topics: true
 
 #  kafka:

@@ -1,3 +1,10 @@
 spring:
   application:
     name: kafkaStarterLocalTest
+  ##Kafka配置
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
