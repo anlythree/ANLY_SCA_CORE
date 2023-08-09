@@ -3,7 +3,7 @@ spring:
     name: kafkaStarterLocalTest
   kafka:
     # 多个节点的话用逗号隔开，例如：xxx:9092,xxx:9092,xxx:9092
-#    bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:9092
     # 消费监听接口监听的主题不存在时，默认会报错
     listener:
       missing-topics-fatal: false
