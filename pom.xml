@@ -140,6 +140,16 @@
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
+                <artifactId>anly-sca-starter-redis</artifactId>
+                <version>${anly-sca-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>anly-sca-starter-kafka</artifactId>
+                <version>${anly-sca-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>anly-sca-starter-database</artifactId>
                 <version>${anly-sca-core.version}</version>
             </dependency>
@@ -156,11 +166,6 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>anly-sca-starter-log</artifactId>
-                <version>${anly-sca-core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>anly-sca-starter-redis</artifactId>
                 <version>${anly-sca-core.version}</version>
             </dependency>
             <!-- 微服务基础包 -->

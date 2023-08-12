@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaConsumer {
 
-    @KafkaListener(topics = "test_topic")
+    @KafkaListener(topics = "#{'${spring.kafka.topics}'.split(',')}")
     public void onMessage(String message){
         // 消费消息
         // 这里为插入数据库代码
@@ -23,3 +23,4 @@ public class KafkaConsumer {
     }
 
 }
+

@@ -1,2 +1,3 @@
-com.anlythree.anlykafka.listener.KafkaConsumer
+com.anlythree.anlykafka.config.KafkaConfig
 com.anlythree.anlykafka.sender.KafkaProducer
+com.anlythree.anlykafka.listener.KafkaConsumer
