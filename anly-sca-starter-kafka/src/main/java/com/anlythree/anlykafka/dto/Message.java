@@ -23,6 +23,8 @@ public class Message<T> implements Serializable {
 
     private T content;
 
+    private Class<T> contentClass;
+
     private Long sendTime;
 
     public Message(String id, T content) {
