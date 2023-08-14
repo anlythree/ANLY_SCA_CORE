@@ -38,6 +38,7 @@
         <module>anly-sca-starter-mysql</module>
         <module>anly-sca-starter-redis</module>
         <module>anly-sca-starter-kafka</module>
+        <module>anly-sca-starter-elasticsearch</module>
 
     </modules>
 
