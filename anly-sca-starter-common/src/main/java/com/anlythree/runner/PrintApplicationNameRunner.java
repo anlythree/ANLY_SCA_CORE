@@ -3,6 +3,7 @@ package com.anlythree.runner;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
  * @author anlythree
  * @date 2020/12/23 9:32
  */
+@ComponentScan("com.anlythree.**")
 @Component
 public class PrintApplicationNameRunner implements ApplicationRunner {
 

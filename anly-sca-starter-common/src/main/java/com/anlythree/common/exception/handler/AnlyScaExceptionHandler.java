@@ -46,7 +46,7 @@ public class AnlyScaExceptionHandler {
 
 
     /**
-     * zone自定义异常处理
+     * 自定义异常处理
      *
      * @param e
      * @return

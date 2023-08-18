@@ -1,0 +1,20 @@
+
+### http调用
+GET http://localhost:8080/a
+Content-Type: application/json
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+TRACE: anlytest-trace
+
+{}
+
+### dubbo调用
+POST http://localhost:8080/dubbo
+Content-Type: application/json
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+TRACE: anlytest-trace
+
+{}

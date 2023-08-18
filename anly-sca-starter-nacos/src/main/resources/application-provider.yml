@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: demo-consumerAndProviderDemo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 43.132.185.144:24502
+dubbo:
+  application:
+    id: dubbo-consumerAndProviderDemo
+    name: dubbo-consumerAndProviderDemo
+  protocol:
+    id: dubbo
+    port: 8081
+  registry:
+    id: nacos
+    address: nacos://43.132.185.144:24502
+  consumer:
+    check: false
+  scan:
+    base-packages: com.anlythree.anlynacos
