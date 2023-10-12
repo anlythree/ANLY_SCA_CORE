@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>com.anlythree</groupId>
 		<artifactId>anly-sca-core</artifactId>
-		<version>0.0.1-release</version>
+		<version>0.0.1-jdk17</version>
 	</parent>
 
 	<artifactId>anly-sca-starter-common</artifactId>
-	<version>0.0.1-release</version>
+	<version>0.0.1-jdk17</version>
 
 	<dependencies>
 		<dependency>
