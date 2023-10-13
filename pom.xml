@@ -53,69 +53,80 @@
         <spring.cloud.version>2022.0.3</spring.cloud.version>
         <spring-boot-admin.version>3.1.2</spring-boot-admin.version>
         <spring.security.version>6.0.11</spring.security.version>
-        <springdoc.version>1.6.13</springdoc.version>
+        <springdoc.version>1.7.0</springdoc.version>
         <alibaba.cloud.version>2022.0.0.0-RC2</alibaba.cloud.version>
 
-        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
-        <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
-        <maven-site-plugin.version>3.11.0</maven-site-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
-        <maven-javadoc-plugin.version>3.3.2</maven-javadoc-plugin.version>
-        <nexus-staging-maven-plugin.version>1.6.12</nexus-staging-maven-plugin.version>
+<!--        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>-->
+<!--        <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>-->
+<!--        <maven-site-plugin.version>3.11.0</maven-site-plugin.version>-->
+<!--        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>-->
+<!--        <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>-->
+<!--        <maven-javadoc-plugin.version>3.3.2</maven-javadoc-plugin.version>-->
+<!--        <nexus-staging-maven-plugin.version>1.6.12</nexus-staging-maven-plugin.version>-->
         <maven-checkstyle-plugin.version>3.2.1</maven-checkstyle-plugin.version>
 
-        <mysql.connector.version>8.0.33</mysql.connector.version>
-        <oracle.connector.version>12.2.0.1</oracle.connector.version>
-        <postgresql.connector.version>42.4.3</postgresql.connector.version>
+        <mysql.connector.version>8.1.0</mysql.connector.version>
+<!--        <oracle.connector.version>12.2.0.1</oracle.connector.version>-->
+<!--        <postgresql.connector.version>42.4.3</postgresql.connector.version>-->
         <druid.version>1.2.18</druid.version>
-        <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
-        <mybaits.generator.version>3.5.3.1</mybaits.generator.version>
+        <mybatis.plus.version>3.5.3.2</mybatis.plus.version>
+        <mybaits.generator.version>3.5.3.2</mybaits.generator.version>
         <dynamic-datasource.version>3.5.2</dynamic-datasource.version>
 
-        <jjwt.version>0.9.1</jjwt.version>
-        <easy-captcha.version>1.6.2</easy-captcha.version>
+        <!-- json验证相关 -->
+<!--        <jjwt.version>0.11.5</jjwt.version>-->
+        <!-- 生成图形校验码 -->
+<!--        <easy-captcha.version>1.6.2</easy-captcha.version>-->
+        <!-- 参数校验 -->
         <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
-        <jetcache.version>2.7.3</jetcache.version>
+<!--        <jetcache.version>2.7.3</jetcache.version>-->
 
         <!-- Apache Dubbo -->
-        <dubbo.version>3.0.13</dubbo.version>
-        <fastjson2.version>2.0.11</fastjson2.version>
+        <dubbo.version>3.2.0</dubbo.version>
+        <fastjson2.version>2.0.40</fastjson2.version>
 
 
-        <poi.version>4.1.2</poi.version>
+<!--        <poi.version>4.1.2</poi.version>-->
         <nacos.client.version>2.2.3</nacos.client.version>
-        <easypoi.version>4.4.0</easypoi.version>
-        <ip2region.version>1.7.2</ip2region.version>
-        <justauth.version>1.16.5</justauth.version>
-        <justauth.springboot.version>1.3.3</justauth.springboot.version>
-        <okhttp.version>4.9.3</okhttp.version>
+<!--        <easypoi.version>4.4.0</easypoi.version>-->
+            <!-- 离线ip定位 -->
+<!--        <ip2region.version>1.7.2</ip2region.version>-->
+        <!-- 登录框架 -->
+<!--        <justauth.version>1.16.5</justauth.version>-->
+<!--        <justauth.springboot.version>1.3.3</justauth.springboot.version>-->
+        <!-- 请求第三方http请求 -->
+<!--        <okhttp.version>4.9.3</okhttp.version>-->
 
-        <sharding-jdbc.version>5.3.2</sharding-jdbc.version>
+<!--        <sharding-jdbc.version>5.3.2</sharding-jdbc.version>-->
 
         <elastic.version>7.17.8</elastic.version>
-        <commons-collections4.version>4.0</commons-collections4.version>
+<!--        <commons-collections4.version>4.0</commons-collections4.version>-->
 
+        <!-- 复制工具  -->
         <dozer.version>6.5.0</dozer.version>
-        <redisson.version>3.18.1</redisson.version>
+        <redisson.version>3.23.5</redisson.version>
+        <!-- 线程安全的redis客户端  -->
         <lettuce.version>6.2.2.RELEASE</lettuce.version>
         <sentinel.version>1.8.6</sentinel.version>
+        <!-- alibaba的用于解决ThreadLocal传递值  -->
         <transmittable.version>2.14.2</transmittable.version>
         <commons-io.version>2.8.0</commons-io.version>
-        <rocketmq.version>4.9.4</rocketmq.version>
+        <!-- 分布式事务 -->
         <seata.version>1.5.2</seata.version>
         <prometheus.version>1.10.2</prometheus.version>
 
+        <!-- 加解密工具 -->
         <jasypt.version>3.0.4</jasypt.version>
 
-        <retrofit.version>2.2.3</retrofit.version>
+        <!-- 跟okhttp一样，调用http的 -->
+<!--        <retrofit.version>2.2.3</retrofit.version>-->
         <gson.version>2.10</gson.version>
-        <guava.version>32.0.0-jre</guava.version>
-        <aws-java-sdk-s3.version>1.12.365</aws-java-sdk-s3.version>
+        <guava.version>32.1.2-jre</guava.version>
+<!--        <aws-java-sdk-s3.version>1.12.365</aws-java-sdk-s3.version>-->
         <lombok.version>1.18.24</lombok.version>
         <hutool.version>5.8.19</hutool.version>
         <caffeine.version>3.1.2</caffeine.version>
-        <sun.jaxb.version>2.3.5</sun.jaxb.version>
+<!--        <sun.jaxb.version>2.3.5</sun.jaxb.version>-->
 
         <snakeyaml.version>1.33</snakeyaml.version>
     </properties>
@@ -183,7 +194,8 @@
             <!-- Druid -->
             <dependency>
                 <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
+                <!-- 改为支持springboot3的版本 -->
+                <artifactId>druid-spring-boot-3-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
             <!-- MySql -->
@@ -193,11 +205,11 @@
                 <version>${mysql.connector.version}</version>
             </dependency>
             <!-- Oracle -->
-            <dependency>
-                <groupId>com.oracle</groupId>
-                <artifactId>ojdbc7</artifactId>
-                <version>${oracle.connector.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.oracle</groupId>-->
+<!--                <artifactId>ojdbc7</artifactId>-->
+<!--                <version>${oracle.connector.version}</version>-->
+<!--            </dependency>-->
             <!-- PostgreSql -->
             <dependency>
                 <groupId>org.postgresql</groupId>
@@ -232,17 +244,32 @@
             </dependency>
 
             <!-- JWT -->
+<!--            <dependency>-->
+<!--                <groupId>io.jsonwebtoken</groupId>-->
+<!--                <artifactId>jjwt</artifactId>-->
+<!--                <version>${jjwt.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt</artifactId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
                 <version>${jjwt.version}</version>
             </dependency>
             <!-- captcha -->
-            <dependency>
-                <groupId>com.github.whvcse</groupId>
-                <artifactId>easy-captcha</artifactId>
-                <version>${easy-captcha.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.github.whvcse</groupId>-->
+<!--                <artifactId>easy-captcha</artifactId>-->
+<!--                <version>${easy-captcha.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>jakarta.validation</groupId>
                 <artifactId>jakarta.validation-api</artifactId>
@@ -253,21 +280,21 @@
                 <artifactId>fastjson2</artifactId>
                 <version>${fastjson2.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.alicp.jetcache</groupId>
-                <artifactId>jetcache-starter-redis</artifactId>
-                <version>${jetcache.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alicp.jetcache</groupId>
-                <artifactId>jetcache-starter-redis-lettuce</artifactId>
-                <version>${jetcache.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alicp.jetcache</groupId>
-                <artifactId>jetcache-starter-redis-springdata</artifactId>
-                <version>${jetcache.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.alicp.jetcache</groupId>-->
+<!--                <artifactId>jetcache-starter-redis</artifactId>-->
+<!--                <version>${jetcache.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.alicp.jetcache</groupId>-->
+<!--                <artifactId>jetcache-starter-redis-lettuce</artifactId>-->
+<!--                <version>${jetcache.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.alicp.jetcache</groupId>-->
+<!--                <artifactId>jetcache-starter-redis-springdata</artifactId>-->
+<!--                <version>${jetcache.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-server</artifactId>
@@ -283,32 +310,32 @@
                 <artifactId>spring-boot-admin-starter-client</artifactId>
                 <version>${spring-boot-admin.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi</artifactId>
-                <version>${poi.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.apache.poi</groupId>-->
+<!--                <artifactId>poi</artifactId>-->
+<!--                <version>${poi.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.alibaba.nacos</groupId>
                 <artifactId>nacos-client</artifactId>
                 <version>${nacos.client.version}</version>
             </dependency>
             <!-- easypoi -->
-            <dependency>
-                <groupId>cn.afterturn</groupId>
-                <artifactId>easypoi-base</artifactId>
-                <version>${easypoi.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.afterturn</groupId>
-                <artifactId>easypoi-web</artifactId>
-                <version>${easypoi.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.afterturn</groupId>
-                <artifactId>easypoi-annotation</artifactId>
-                <version>${easypoi.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>cn.afterturn</groupId>-->
+<!--                <artifactId>easypoi-base</artifactId>-->
+<!--                <version>${easypoi.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>cn.afterturn</groupId>-->
+<!--                <artifactId>easypoi-web</artifactId>-->
+<!--                <version>${easypoi.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>cn.afterturn</groupId>-->
+<!--                <artifactId>easypoi-annotation</artifactId>-->
+<!--                <version>${easypoi.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo</artifactId>
@@ -324,33 +351,33 @@
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <version>${dubbo.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.lionsoul</groupId>
-                <artifactId>ip2region</artifactId>
-                <version>${ip2region.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>me.zhyd.oauth</groupId>
-                <artifactId>JustAuth</artifactId>
-                <version>${justauth.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.xkcoding.justauth</groupId>
-                <artifactId>justauth-spring-boot-starter</artifactId>
-                <version>${justauth.springboot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.squareup.okhttp3</groupId>
-                <artifactId>okhttp</artifactId>
-                <version>${okhttp.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.lionsoul</groupId>-->
+<!--                <artifactId>ip2region</artifactId>-->
+<!--                <version>${ip2region.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>me.zhyd.oauth</groupId>-->
+<!--                <artifactId>JustAuth</artifactId>-->
+<!--                <version>${justauth.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.xkcoding.justauth</groupId>-->
+<!--                <artifactId>justauth-spring-boot-starter</artifactId>-->
+<!--                <version>${justauth.springboot.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.squareup.okhttp3</groupId>-->
+<!--                <artifactId>okhttp</artifactId>-->
+<!--                <version>${okhttp.version}</version>-->
+<!--            </dependency>-->
 
             <!--shardingsphere的springboot依赖jar-->
-            <dependency>
-                <groupId>org.apache.shardingsphere</groupId>
-                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-                <version>${sharding-jdbc.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.apache.shardingsphere</groupId>-->
+<!--                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
+<!--                <version>${sharding-jdbc.version}</version>-->
+<!--            </dependency>-->
             <!-- ElasticSearch依赖包-->
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
@@ -362,11 +389,11 @@
                 <artifactId>elasticsearch</artifactId>
                 <version>${elastic.version}</version>
             </dependency>
-            <dependency>
-                <groupId>commons-collections</groupId>
-                <artifactId>commons-collections4</artifactId>
-                <version>${commons-collections4.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>commons-collections</groupId>-->
+<!--                <artifactId>commons-collections4</artifactId>-->
+<!--                <version>${commons-collections4.version}</version>-->
+<!--            </dependency>-->
 
             <!-- 对象转换 -->
             <dependency>
@@ -402,16 +429,6 @@
                 <version>${commons-io.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.rocketmq</groupId>
-                <artifactId>rocketmq-client</artifactId>
-                <version>${rocketmq.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.rocketmq</groupId>
-                <artifactId>rocketmq-acl</artifactId>
-                <version>${rocketmq.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-registry-prometheus</artifactId>
                 <version>${prometheus.version}</version>
@@ -421,11 +438,11 @@
                 <artifactId>jasypt-spring-boot-starter</artifactId>
                 <version>${jasypt.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.github.lianjiatech</groupId>
-                <artifactId>retrofit-spring-boot-starter</artifactId>
-                <version>${retrofit.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.github.lianjiatech</groupId>-->
+<!--                <artifactId>retrofit-spring-boot-starter</artifactId>-->
+<!--                <version>${retrofit.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>io.seata</groupId>
                 <artifactId>seata-spring-boot-starter</artifactId>
@@ -448,11 +465,11 @@
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-s3</artifactId>
-                <version>${aws-java-sdk-s3.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.amazonaws</groupId>-->
+<!--                <artifactId>aws-java-sdk-s3</artifactId>-->
+<!--                <version>${aws-java-sdk-s3.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -495,11 +512,11 @@
                 <artifactId>caffeine</artifactId>
                 <version>${caffeine.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.sun.xml.bind</groupId>
-                <artifactId>jaxb-impl</artifactId>
-                <version>${sun.jaxb.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.sun.xml.bind</groupId>-->
+<!--                <artifactId>jaxb-impl</artifactId>-->
+<!--                <version>${sun.jaxb.version}</version>-->
+<!--            </dependency>-->
             <!-- SpringDoc -->
             <dependency>
                 <groupId>org.springdoc</groupId>
