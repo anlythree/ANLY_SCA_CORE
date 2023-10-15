@@ -32,7 +32,12 @@
 		<!-- druid -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
-			<artifactId>druid-spring-boot-starter</artifactId>
+			<artifactId>druid-spring-boot-3-starter</artifactId>
+		</dependency>
+		<!-- servlet支持，这个包是在tomcat下的，这里单独引入 -->
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
 		</dependency>
 		<!-- MySql -->
 		<dependency>

@@ -56,7 +56,7 @@
         <springdoc.version>1.7.0</springdoc.version>
         <alibaba.cloud.version>2022.0.0.0-RC2</alibaba.cloud.version>
 
-<!--        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>-->
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
 <!--        <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>-->
 <!--        <maven-site-plugin.version>3.11.0</maven-site-plugin.version>-->
 <!--        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>-->
@@ -68,7 +68,7 @@
         <mysql.connector.version>8.1.0</mysql.connector.version>
 <!--        <oracle.connector.version>12.2.0.1</oracle.connector.version>-->
 <!--        <postgresql.connector.version>42.4.3</postgresql.connector.version>-->
-        <druid.version>1.2.18</druid.version>
+        <druid.version>1.2.20</druid.version>
         <mybatis.plus.version>3.5.3.2</mybatis.plus.version>
         <mybaits.generator.version>3.5.3.2</mybaits.generator.version>
         <dynamic-datasource.version>3.5.2</dynamic-datasource.version>
@@ -556,27 +556,29 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.0</version>
+                <version>3.10.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jar-plugin</artifactId>-->
+<!--&lt;!&ndash;                <version>2.4</version>&ndash;&gt;-->
+<!--                <version>3.10.1</version>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.7.1</version>
+<!--                <version>3.7.1</version>-->
+                <version>3.12.0</version>
             </plugin>
             <!-- Source -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.3.0</version>
                 <configuration>
                     <attach>true</attach>
                 </configuration>
@@ -626,17 +628,17 @@
                 </executions>
             </plugin>
             <!--自动发布-->
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>sonatype</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.sonatype.plugins</groupId>-->
+<!--                <artifactId>nexus-staging-maven-plugin</artifactId>-->
+<!--                <version>1.6.8</version>-->
+<!--                <extensions>true</extensions>-->
+<!--                <configuration>-->
+<!--                    <serverId>sonatype</serverId>-->
+<!--                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
+<!--                    <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
             <!--            checkstyle 插件配置 -->
 <!--            <plugin>-->
@@ -665,78 +667,78 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <id>local</id>
-            <properties>
-                <!--当前环境-->
-                <spring.active>local</spring.active>
-                <config.server-addr>127.0.0.1:8848</config.server-addr>
-                <config.namespace></config.namespace>
-                <config.group>DEFAULT_GROUP</config.group>
-                <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>
-                <sentinel.port>8719</sentinel.port>
-                <sentinel.dashboard>127.0.0.1:8088</sentinel.dashboard>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <spring.active>dev</spring.active>
-                <config.server-addr>127.0.0.1:8848</config.server-addr>
-                <config.namespace></config.namespace>
-                <config.group>DEFAULT_GROUP</config.group>
-                <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>
-                <sentinel.port>8719</sentinel.port>
-                <sentinel.dashboard>127.0.0.1:8080</sentinel.dashboard>
-            </properties>
-            <!--            <activation>-->
-            <!--                <activeByDefault>true</activeByDefault>-->
-            <!--            </activation>-->
-        </profile>
-        <profile>
-            <id>test</id>
-            <properties>
-                <spring.active>test</spring.active>
-                <config.server-addr>172.26.85.32:8848</config.server-addr>
-                <config.namespace>568b8eaa-f25d-4f2a-8c87-83dcb4caa955</config.namespace>
-                <config.group>DEFAULT_GROUP</config.group>
-                <discovery.server-addr>172.26.85.32:8848</discovery.server-addr>
-                <sentinel.port>8719</sentinel.port>
-                <sentinel.dashboard>localhost:8080</sentinel.dashboard>
-            </properties>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <spring.active>prod</spring.active>
-                <config.server-addr>172.26.85.32:8848</config.server-addr>
-                <config.namespace>568b8eaa-f25d-4f2a-8c87-83dcb4caa955</config.namespace>
-                <config.group>DEFAULT_GROUP</config.group>
-                <discovery.server-addr>172.26.85.32:8848</discovery.server-addr>
-                <sentinel.port>8719</sentinel.port>
-                <sentinel.dashboard>localhost:8080</sentinel.dashboard>
-            </properties>
-        </profile>
-        <profile>
-            <id>docker</id>
-            <properties>
-                <spring.active>docker</spring.active>
-                <config.server-addr>172.30.0.48:8848</config.server-addr>
-                <config.namespace></config.namespace>
-                <config.group>DEFAULT_GROUP</config.group>
-                <discovery.server-addr>172.30.0.48:8848</discovery.server-addr>
-                <sentinel.port>8719</sentinel.port>
-                <sentinel.dashboard>172.30.0.80:8088</sentinel.dashboard>
-            </properties>
-            <!--            <activation>-->
-            <!--                <activeByDefault>true</activeByDefault>-->
-            <!--            </activation>-->
-        </profile>
-    </profiles>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>local</id>-->
+<!--            <properties>-->
+<!--                &lt;!&ndash;当前环境&ndash;&gt;-->
+<!--                <spring.active>local</spring.active>-->
+<!--                <config.server-addr>127.0.0.1:8848</config.server-addr>-->
+<!--                <config.namespace></config.namespace>-->
+<!--                <config.group>DEFAULT_GROUP</config.group>-->
+<!--                <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>-->
+<!--                <sentinel.port>8719</sentinel.port>-->
+<!--                <sentinel.dashboard>127.0.0.1:8088</sentinel.dashboard>-->
+<!--            </properties>-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            <id>dev</id>-->
+<!--            <properties>-->
+<!--                <spring.active>dev</spring.active>-->
+<!--                <config.server-addr>127.0.0.1:8848</config.server-addr>-->
+<!--                <config.namespace></config.namespace>-->
+<!--                <config.group>DEFAULT_GROUP</config.group>-->
+<!--                <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>-->
+<!--                <sentinel.port>8719</sentinel.port>-->
+<!--                <sentinel.dashboard>127.0.0.1:8080</sentinel.dashboard>-->
+<!--            </properties>-->
+<!--            &lt;!&ndash;            <activation>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <activeByDefault>true</activeByDefault>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </activation>&ndash;&gt;-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            <id>test</id>-->
+<!--            <properties>-->
+<!--                <spring.active>test</spring.active>-->
+<!--                <config.server-addr>172.26.85.32:8848</config.server-addr>-->
+<!--                <config.namespace>568b8eaa-f25d-4f2a-8c87-83dcb4caa955</config.namespace>-->
+<!--                <config.group>DEFAULT_GROUP</config.group>-->
+<!--                <discovery.server-addr>172.26.85.32:8848</discovery.server-addr>-->
+<!--                <sentinel.port>8719</sentinel.port>-->
+<!--                <sentinel.dashboard>localhost:8080</sentinel.dashboard>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            <id>prod</id>-->
+<!--            <properties>-->
+<!--                <spring.active>prod</spring.active>-->
+<!--                <config.server-addr>172.26.85.32:8848</config.server-addr>-->
+<!--                <config.namespace>568b8eaa-f25d-4f2a-8c87-83dcb4caa955</config.namespace>-->
+<!--                <config.group>DEFAULT_GROUP</config.group>-->
+<!--                <discovery.server-addr>172.26.85.32:8848</discovery.server-addr>-->
+<!--                <sentinel.port>8719</sentinel.port>-->
+<!--                <sentinel.dashboard>localhost:8080</sentinel.dashboard>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            <id>docker</id>-->
+<!--            <properties>-->
+<!--                <spring.active>docker</spring.active>-->
+<!--                <config.server-addr>172.30.0.48:8848</config.server-addr>-->
+<!--                <config.namespace></config.namespace>-->
+<!--                <config.group>DEFAULT_GROUP</config.group>-->
+<!--                <discovery.server-addr>172.30.0.48:8848</discovery.server-addr>-->
+<!--                <sentinel.port>8719</sentinel.port>-->
+<!--                <sentinel.dashboard>172.30.0.80:8088</sentinel.dashboard>-->
+<!--            </properties>-->
+<!--            &lt;!&ndash;            <activation>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <activeByDefault>true</activeByDefault>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </activation>&ndash;&gt;-->
+<!--        </profile>-->
+<!--    </profiles>-->
 
 
 
